@@ -8,6 +8,6 @@ class KlienController extends Controller
 {
     public function index()
     {
-        return view('Data_Klien');
+        return view ('admin_laman.admin_klien');
     }
 }
