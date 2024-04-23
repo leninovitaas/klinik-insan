@@ -1,0 +1,152 @@
+
+
+/* Warna penting  */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:  Poppins;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #E3E3E3 ;
+}
+
+.container-cs{
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+}
+
+.aside {
+    width: 23%;
+    height: 100%;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+
+}
+
+.anakcontent {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+}
+
+.kotak {
+    width: 100%;
+    padding: 20px 30px;
+    margin: auto;
+    background-image: linear-gradient(to bottom, #8bb2b2, #d9d9d9);
+    display: flex;
+    border-radius: 35px;
+    justify-content: space-between;
+    margin-top: 1%;
+    box-shadow: 3px 3px 6px #333;
+}
+.ini {
+    font-size: 50px;
+    /* background-color: aqua; */
+}
+
+.txtdb {
+    font-size: 40px;
+    margin-top: 1%;
+    margin-left: 2%;
+}
+
+.itu {
+    font-size: 24px ;
+}
+
+.sidebar {
+    height: 100%; 
+    width: 100%;
+    background-color: #8bb2b2; 
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding-top: 35px;
+    padding-left: 50px;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+.bungkus {
+    display: flex;
+    width: 100%;
+}
+
+.isi {
+    margin-left: 50px;
+}
+
+
+
+.kotakbawah {
+    width: 100%;
+    margin: auto;
+    height: 60%;
+    border-radius: 35px;
+    background-color: #8bb2b2;
+    margin-top: 20px;
+}
+
+
+.profil {
+    padding-top: 50px;
+    width: 50%;
+    margin: auto;
+    background-size: cover;
+}
+
+.kotakdalam {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: start;
+    padding-top: 20px;
+
+}
+
+.kotakaktif {
+    background-color: #D0D0D0;
+    width: 50%;
+    margin-left: 20px;
+    height: 80px;
+    margin-bottom: 30px;
+    bottom: 30px;
+    border-radius: 5px;
+}
+
+.isikotakaktif {
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+
+.tombol {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+    margin-left: 55px;
+    border-color:  #333;
+    border-radius: 5px;
+    background-color:  #8bb2b2;
+}
