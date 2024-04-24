@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\AdminFormController;
+use App\Http\Controllers\AdminDashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KlienController;
 
@@ -17,7 +17,7 @@ Route::get('login', [HomeController::class, 'login'])->name('login');
 
 // Route form Controller 
 
-Route::resource('admin_form',AdminFormController::class);
+Route::resource('admin_dashboard',AdminDashboardController::class);
 
 Route::get('admin_klien', [KlienController::class, 'index'])->name('admin_klien');
 

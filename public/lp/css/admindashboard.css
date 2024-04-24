@@ -151,3 +151,11 @@ body {
     border-radius: 5px;
     background-color:  #8bb2b2;
 }
+
+.Klinik {
+    width: 260px !important;
+    height: 150px !important;
+    background-image: url("/admin-asset/payment.png");
+    background-size: cover;
+    padding: 0; 
+    }
