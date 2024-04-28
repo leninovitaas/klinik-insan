@@ -19,7 +19,7 @@
                     <div class="aside">
                         <div class="sidebar">
                             <div class="profil">
-                                <img src="{{ asset('admin-asset/logors.png') }}" width="100" style="border-radius: 50%; object-fit: cover;" height="80" alt="">
+                                <img src="{{ asset('lp/images/logobaru.png') }}" width="100" style="border-radius: 50%; object-fit: cover;" height="80" alt="">
                             </div>
                             <div class="text">
                                 <ul>

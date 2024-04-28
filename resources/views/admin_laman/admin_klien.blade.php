@@ -17,7 +17,7 @@
             <div class="aside">
                 <div class="sidebar">
                             <div class="profil">
-                                <img src="{{ asset('admin-asset/logors.png') }}" width="100" style="border-radius: 50%; object-fit: cover;" height="80" alt="">
+                                <img src="{{ asset('lp/images/logobaru.png') }}" width="100" style="border-radius: 50%; object-fit: cover;" height="80" alt="">
                             </div>
                             <div class="text">
                                 <ul>
@@ -41,7 +41,7 @@
             <div class="content">
                 <div class="anakcontent">
                     <div style="margin-top: 50px;"></div>
-                    <div style="background-color: #8bb2b2;  width:40%; margin:auto;  padding: 20px 40px; border-radius: 10px;">
+                    <div style="background-color: #7ea1cd;  width:40%; margin:auto;  padding: 20px 40px; border-radius: 10px;">
                         <h1 style="text-align: center; font-weight:bold; color:black; "">Data Klien</h1>
                     </div>
                     <div style="display: flex; justify-content: space-between; margin-top: 20px;">
@@ -57,16 +57,16 @@
                             <th>Nama</th>
                             <th>Nama Wali</th>
                             <th>Alamat</th>
-                            <th>Telfon</th>
+                            <th>No.Telepon</th>
                             <th>Paket</th>
                             <th>L/P</th>
-                            <th>Action</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>Yola Septia</td>
-                            <td>Bpk Nyayola</td>
+                            <td>Viar Putri</td>
                             <td>Jl. takeran No. 123</td>
                             <td>081234567890</td>
                             <td>2</td>
@@ -77,10 +77,10 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Ilma Yups</td>
-                            <td>Mam iNya</td>
+                            <td>Triani Yuli</td>
+                            <td>Putri Silvia</td>
                             <td>Jl. Suka Bangsa No. 17</td>
-                            <td>081234567890</td>
+                            <td>0872273673</td>
                             <td>1</td>
                             <td>P</td>
                             <td>
@@ -90,9 +90,9 @@
                         </tr>
                         <tr>
                             <td>Leni Novita</td>
-                            <td>Uncle Lenov</td>
+                            <td>Rendy Catur</td>
                             <td>Jl. Singaraja No. 22</td>
-                            <td>081234567890</td>
+                            <td>08523556227</td>
                             <td>2</td>
                             <td>P</td>
                             <td>
@@ -101,12 +101,24 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Nihla SySya</td>
-                            <td>Gma SySyaa</td>
+                            <td>NihlaTansya</td>
+                            <td>Wahyu Mukti</td>
                             <td>Jl. SampingParis No. 34</td>
-                            <td>081234567890</td>
+                            <td>08128865327</td>
                             <td>4</td>
                             <td>P</td>
+                            <td>
+                                <button class="btn btn-primary">Edit</button>
+                                <button class="btn btn-danger">Hapus</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Surya Ilhami</td>
+                            <td>Risna Triayu</td>
+                            <td>Jl. Pahlawan No. 20</td>
+                            <td>0821536622</td>
+                            <td>4</td>
+                            <td>L</td>
                             <td>
                                 <button class="btn btn-primary">Edit</button>
                                 <button class="btn btn-danger">Hapus</button>
