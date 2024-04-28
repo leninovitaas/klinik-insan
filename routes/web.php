@@ -18,8 +18,9 @@ Route::get('login', [HomeController::class, 'login'])->name('login');
 // Route form Controller 
 
 Route::resource('admin_dashboard',AdminDashboardController::class);
+// Route::get('admin_dashboard', [AdminDashboardController::class,'index'])->nama('dashboard');
 
-Route::get('admin_klien', [KlienController::class, 'index'])->name('admin_klien');
+Route::get('admin_klien', [KlienController::class, 'index'])->name('klien');
 
 // Route Controller Buat SideBar
 

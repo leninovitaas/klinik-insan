@@ -16,29 +16,9 @@
     <body>
 
                 <div class="container-cs">
-                    <div class="aside">
-                        <div class="sidebar">
-                            <div class="profil">
-                                <img src="{{ asset('lp/images/logobaru.png') }}" width="100" style="border-radius: 50%; object-fit: cover;" height="80" alt="">
-                            </div>
-                            <div class="text">
-                                <ul>
-                                    <li><a href="#">Dashboard</a></li>
-                                    <li><a href="#">Klien</a></li>
-                                    <li><a href="#">Form</a></li>
-                                    <li><a href="#">Kehadiran</a></li>
-                                    <li><a href="#">Riwayat Kehadiran</a></li>
-                                    <li><a href="#">Billing</a></li>
-                                </ul>
-                            </div>
-                            <div class="logout">
-                                <button class="tombol">
-                                    <img src="{{ asset('admin-asset/Logout.png') }}" width="33" height="23" alt="Deskripsi Gambar">
-                                    <span>Logout</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Memanggil Sidebar -->
+                    @include('layouts.sidebar')
+                    
                     <div class="content">
                         <div class="anakcontent">
                             <div class=" ">
