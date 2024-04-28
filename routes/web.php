@@ -21,3 +21,10 @@ Route::resource('admin_dashboard',AdminDashboardController::class);
 
 Route::get('admin_klien', [KlienController::class, 'index'])->name('admin_klien');
 
+// Route Controller Buat SideBar
+
+Route::get('/admin_profile', function () {
+    // Logika untuk menampilkan halaman profile
+    return view('profile');
+})->name('profile');
+
