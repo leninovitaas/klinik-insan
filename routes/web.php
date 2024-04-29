@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminDashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KlienController;
 use App\Http\Controllers\AdminFormController;
+use App\Http\Controllers\ProfilAdminController;
 
 
 
@@ -34,6 +35,9 @@ Route::get('/admin_profile', function () {
     // Logika untuk menampilkan halaman profile
     return view('profile');
 })->name('profile');
+
+// triani tampilan profil admin
+Route::get('/admin_profile', [ProfilAdminController::class, 'showProfile'])->name('profile');
 
 
 //sasa admin kehadiran
