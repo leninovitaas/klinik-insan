@@ -1,0 +1,175 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:  Poppins;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body {
+    background-color: #E3E3E3 ;
+}
+
+.container-cs{
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+}
+
+.aside {
+    width: 23%;
+    height: 100%;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+
+}
+
+.anakcontent {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+}
+
+.sidebar {
+    height: 100%; 
+    width: 100%;
+    background-color: #8bb2b2; 
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding-top: 35px;
+    padding-left: 50px;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+/* Mengatur teks menjadi tengah */
+.text-center {
+    text-align: center;
+}
+h2 {
+    margin-bottom: 70px; /* Sesuaikan nilai margin sesuai kebutuhan Anda */
+}
+
+/* Set box-sizing to border-box for all elements */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Basic styles for the form */
+form {
+    max-width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #63a2b2;
+}
+
+/* Styling for form labels */
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.label-kiri {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.label-kanan {
+    margin-left: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling for form inputs */
+input[type="text"],
+select {
+    width: 100%; /* Ubah lebar menjadi 100% agar sesuai dengan kontainer */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #D7D1D1;
+    border-radius: 3px;
+}
+
+/* Styling for submit button */
+input[type="submit"] {
+    width: auto; /* Atur lebar sesuai kebutuhan konten */
+    padding: 10px 20px; /* Sesuaikan padding */
+    margin-top: 10px; /* Tambahkan margin top agar tidak menempel dengan form */
+    background-color: #2e9090;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Mengatur tata letak flex untuk form */
+.form-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Mengatur tata letak flex untuk tombol simpan */
+.save-button {
+    justify-content: flex-end;
+    margin-left: 80%;
+}
+
+input[type="submit"]:hover {
+    background-color: #385959;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    form {
+        width: 100%;
+    }
+
+    /* Adjust layout for smaller screens */
+    label {
+        margin-bottom: 3px;
+        display: block;
+    }
+
+    input[type="text"],
+    select {
+        margin-bottom: 8px;
+    }
+}
+
+.bg-putih {
+    width: 100%;
+    height: 32.67px;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+#jenis_kelamin {
+    width: 100%; /* Menyesuaikan lebar textarea dengan 100% */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #D7D1D1;
+    border-radius: 3px;
+}
