@@ -28,7 +28,10 @@
                             <h5 class="mb-0">Cari :</h5>
                             <input type="text" placeholder="  Cari Klien..." style="margin-left:5px; border-radius:10px;">
                         </div>
-                        <button class="btn btn-tambah">Tambah</button>
+                        {{-- pakek tag a soale biar bisa mengunakan Href untuk route --}}
+                        <a class="btn btn-primary " href="{{ route('admin_klien.create') }}">Tambah</a>
+                        {{-- <button class="btn btn-tambah">
+                        </button> --}}
                     </div>
                 <table class="table-klien">
                     <thead>
@@ -43,71 +46,64 @@
                         </tr>
                     </thead>
                     <tbody>
+                        {{-- Mengunakan fungsi forelse untuk mengambil data dari data klien --}}
+                        @forelse ($data_kliens as $dataklien)
                         <tr>
-                            <td>Yola Septia</td>
-                            <td>Viar Putri</td>
-                            <td>Jl. takeran No. 123</td>
-                            <td>081234567890</td>
-                            <td>2</td>
-                            <td>P</td>
-                            <td>
-                                <button class="btn btn-primary">Edit</button>
-                                <button class="btn btn-danger">Hapus</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Triani Yuli</td>
-                            <td>Putri Silvia</td>
-                            <td>Jl. Suka Bangsa No. 17</td>
-                            <td>0872273673</td>
-                            <td>1</td>
-                            <td>P</td>
-                            <td>
-                                <button class="btn btn-primary">Edit</button>
-                                <button class="btn btn-danger">Hapus</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Leni Novita</td>
-                            <td>Rendy Catur</td>
-                            <td>Jl. Singaraja No. 22</td>
-                            <td>08523556227</td>
-                            <td>2</td>
-                            <td>P</td>
-                            <td>
-                                <button class="btn btn-primary">Edit</button>
-                                <button class="btn btn-danger">Hapus</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>NihlaTansya</td>
-                            <td>Wahyu Mukti</td>
-                            <td>Jl. SampingParis No. 34</td>
-                            <td>08128865327</td>
-                            <td>4</td>
-                            <td>P</td>
-                            <td>
-                                <button class="btn btn-primary">Edit</button>
-                                <button class="btn btn-danger">Hapus</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Surya Ilhami</td>
-                            <td>Risna Triayu</td>
-                            <td>Jl. Pahlawan No. 20</td>
-                            <td>0821536622</td>
-                            <td>4</td>
-                            <td>L</td>
-                            <td>
-                                <button class="btn btn-primary">Edit</button>
-                                <button class="btn btn-danger">Hapus</button>
+                            {{-- dataklien menjadi varialbel baru --}}
+                            <td>{{$dataklien->nama}}</td>
+                             {{-- mengambil nama dari dataklien --}}
+                            <td>{{$dataklien->nama_wali}}</td>
+                            <td>{{$dataklien->alamat}}</td>
+                            <td>{{$dataklien->no_telepon}}</td>
+                            <td>{{$dataklien->paket}}</td>
+                            <td>{{$dataklien->jenis_kelamin}}</td>
+                            <td class="text-center" >
+                                <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('admin_klien.destroy', $dataklien->id) }}" method="POST">
+                                    <a href="{{ route('admin_klien.show', $dataklien->id) }}" class="btn btn-sm btn-dark">SHOW</a>
+                                    <a href="{{ route('admin_klien.edit', $dataklien->id) }}" class="btn btn-sm btn-primary">EDIT</a>
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-sm btn-danger">HAPUS</button>
+                                </form>
+                                {{-- <button class="btn btn-primary">Edit</button>
+                                <button class="btn btn-danger">Hapus</button> --}}
                             </td>
                         </tr>
                         <!-- Isi data lainnya di sini -->
                     </tbody>
+                    @empty
+                        <div class="alert alert-danger">
+                            Data Klien belum Tersedia.
+                        </div>
+                        @endforelse
                 </table>
+                {{-- buat Paginasi jika data lebih dari 10 --}}
+                {{ $data_kliens->links() }}
                 </div>
             </div>
         </div>
+
+        <script>
+            //message with sweetalert
+            @if(session('success'))
+                Swal.fire({
+                    icon: "success",
+                    title: "BERHASIL",
+                    text: "{{ session('success') }}",
+                    showConfirmButton: false,
+                    timer: 2000
+                });
+            @elseif(session('error'))
+                Swal.fire({
+                    icon: "error",
+                    title: "GAGAL!",
+                    text: "{{ session('error') }}",
+                    showConfirmButton: false,
+                    timer: 2000
+                });
+            @endif
+    
+        </script>
+
     </body>
 </html>

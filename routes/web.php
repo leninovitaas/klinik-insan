@@ -20,7 +20,10 @@ Route::get('login', [HomeController::class, 'login'])->name('login');
 Route::resource('admin_dashboard',AdminDashboardController::class);
 // Route::get('admin_dashboard', [AdminDashboardController::class,'index'])->nama('dashboard');
 
-Route::get('admin_klien', [KlienController::class, 'index'])->name('klien');
+// Route::get('admin_klien', [KlienController::class, 'index'])->name('klien');
+
+//membuat rute admin_klien
+Route::resource('admin_klien', \App\Http\Controllers\KlienController::class);
 
 // Route Controller Buat SideBar
 
