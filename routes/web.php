@@ -16,7 +16,7 @@ Route::get('home', [HomeController::class, 'index'])->name('home');
 
 Route::get('login', [HomeController::class, 'login'])->name('login');
 
-// Route form Controller 
+// Route form Controller
 
 Route::get('/admin_form', [AdminFormController::class, 'index']);
 
@@ -35,3 +35,16 @@ Route::get('/admin_profile', function () {
     return view('profile');
 })->name('profile');
 
+
+//sasa admin kehadiran
+Route::get('/kehadiranklien', function () {
+    return view('admin_kehadiran.kehadiranklien');
+});
+
+Route::get('/riwayatkehadiranklien', function () {
+    return view('admin_kehadiran.riwayatkehadiranklien');
+});
+
+Route::get('/klien2', function () {
+    return view('admin_kehadiran.klien2');
+});
