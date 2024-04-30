@@ -30,11 +30,11 @@
                         <table class="table table-striped">
                             <tr>
                                 <th>NIK</th>
-                                <td>PYRMATS</td>
+                                <td>2333200452662828</td>
                             </tr>
                             <tr>
                                 <th>Nama</th>
-                                <td>PYRMATS</td>
+                                <td>Alexander</td>
                             </tr>
                             <tr>
                                 <th>Tempat Lahir</th>
@@ -42,7 +42,7 @@
                             </tr>
                             <tr>
                                 <th>Tanggal Lahir</th>
-                                <td>2000-01-01</td>
+                                <td>12-10-2000/td>
                             </tr>
                             <tr>
                                 <th>Alamat</th>
@@ -50,7 +50,7 @@
                             </tr>
                             <tr>
                                 <th>No. Telp</th>
-                                <td>(0341) 555-1234</td>
+                                <td>0895395668580</td>
                             </tr>
                             <tr>
                                 <th>Email</th>
@@ -58,19 +58,9 @@
                             </tr>
                             <tr>
                                 <th>Jenis Kelamin</th>
+                                <td>Laki-laki</td>
                     
                             <tr>
-                                <th>Jabatan</th>
-                                <td>Software Engineer</td>
-                            </tr>
-                            <tr>
-                                <th>Departemen</th>
-                                <td>IT</td>
-                            </tr>
-                            <tr>
-                                <th>Tanggal Masuk</th>
-                                <td>2022-01-01</td>
-                            </tr>
                         </table>
                     </div>
                         <!-- Tombol Edit -->
