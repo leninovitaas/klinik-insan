@@ -29,7 +29,8 @@
                             <input type="text" placeholder="  Cari Klien..." style="margin-left:5px; border-radius:10px;">
                         </div>
                         {{-- pakek tag a agar bisa mengunakan Href untuk route --}}
-                        <a class="btn btn-primary " href="{{ route('admin_klien.create') }}">Tambah</a>
+                        <a class="btn btn-custom " style="background-color:  #447abc;  padding: 10px;
+                        color: white; font-weight: 600;" href="{{ route('admin_klien.create') }}">Tambah</a>
                         {{-- <button class="btn btn-tambah">
                         </button> --}}
                     </div>

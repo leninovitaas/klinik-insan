@@ -21,7 +21,7 @@ Route::get('login', [HomeController::class, 'login'])->name('login');
 
 // Route form Controller
 
-Route::get('/admin_form', [AdminFormController::class, 'index']);
+Route::get('admin_form', [AdminFormController::class, 'index'])->name('form');
 
 Route::resource('admin_dashboard',AdminDashboardController::class);
 // Route::get('admin_dashboard', [AdminDashboardController::class,'index'])->nama('dashboard');

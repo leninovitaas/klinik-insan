@@ -8,7 +8,7 @@
                 <ul>
                     <li><a href="{{route('admin_dashboard.index')}}">Dashboard</a></li>
                     <li><a href="{{route('admin_klien.index')}}">Klien</a></li>
-                    <li><a href="#">Form</a></li>
+                    <li><a href="{{route('form')}}">Form</a></li>
                     <li><a href="#">Kehadiran</a></li>
                     <li><a href="#">Riwayat Kehadiran</a></li>
                     <li><a href="#">Billing</a></li>
