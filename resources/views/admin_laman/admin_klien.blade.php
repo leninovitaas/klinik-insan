@@ -21,7 +21,7 @@
                 <div class="anakcontent">
                     <div style="margin-top: 50px;"></div>
                     <div style="background-color: #7ea1cd;  width:40%; margin:auto;  padding: 20px 40px; border-radius: 10px;">
-                        <h1 style="text-align: center; font-weight:bold; color:black; ">Data Klien</h1>
+                        <h1 style="text-align: center; font-weight:bold; color:black; "">Data Klien</h1>
                     </div>
                     <div style="display: flex; justify-content: space-between; margin-top: 20px;">
                         <div class="d-flex align-items-center">
@@ -46,18 +46,18 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {{-- Mengunakan fungsi forelse untuk mengambil data dari data klien --}}
+                        {{-- Menggunakan fungsi forelse untuk mengambil data dari data klien --}}
                         @forelse ($data_kliens as $dataklien)
                         <tr>
-                            {{-- dataklien menjadi varialbel baru --}}
+                            {{-- dataklien menjadi variabel baru --}}
                             <td>{{$dataklien->nama}}</td>
-                             {{-- mengambil nama dari dataklien --}}
+                            {{-- mengambil nama dari dataklien --}}
                             <td>{{$dataklien->nama_wali}}</td>
                             <td>{{$dataklien->alamat}}</td>
                             <td>{{$dataklien->no_telepon}}</td>
                             <td>{{$dataklien->paket}}</td>
                             <td>{{$dataklien->jenis_kelamin}}</td>
-                            <td class="text-center" >
+                            <td class="text-center">
                                 <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('admin_klien.destroy', $dataklien->id) }}" method="POST">
                                     <a href="{{ route('admin_klien.edit', $dataklien->id) }}" class="btn btn-sm btn-primary">EDIT</a>
                                     @csrf
@@ -70,12 +70,17 @@
                             </td>
                         </tr>
                         <!-- Isi data lainnya di sini -->
-                    </tbody>
-                    @empty
-                        <div class="alert alert-danger">
-                            Data Klien belum Tersedia.
-                        </div>
+                        @empty
+                        <!-- Tampilkan pesan jika tidak ada data -->
+                        <tr>
+                            <td colspan="7" class="text-center">
+                                <div class="alert alert-danger">
+                                    Data Klien belum Tersedia.
+                                </div>
+                            </td>
+                        </tr>
                         @endforelse
+                    </tbody>
                 </table>
                 {{-- buat Paginasi jika data lebih dari 10 --}}
                 {{ $data_kliens->links() }}
@@ -84,7 +89,7 @@
         </div>
 
         <script>
-            message with sweetalert
+            //message with sweetalert
             @if(session('success'))
                 Swal.fire({
                     icon: "success",
@@ -102,11 +107,8 @@
                     timer: 2000
                 });
             @endif
-
     
         </script>
-
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     </body>
 </html>
