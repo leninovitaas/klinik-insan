@@ -30,11 +30,11 @@
                         <table class="table table-striped">
                             <tr>
                                 <th>NIK</th>
-                                <td>2333200452662828</td>
+                                <td>PYRMATS</td>
                             </tr>
                             <tr>
                                 <th>Nama</th>
-                                <td>Alexander</td>
+                                <td>PYRMATS</td>
                             </tr>
                             <tr>
                                 <th>Tempat Lahir</th>
@@ -42,7 +42,7 @@
                             </tr>
                             <tr>
                                 <th>Tanggal Lahir</th>
-                                <td>12-10-2000/td>
+                                <td>2000-01-01</td>
                             </tr>
                             <tr>
                                 <th>Alamat</th>
@@ -50,7 +50,7 @@
                             </tr>
                             <tr>
                                 <th>No. Telp</th>
-                                <td>0895395668580</td>
+                                <td>(0341) 555-1234</td>
                             </tr>
                             <tr>
                                 <th>Email</th>
@@ -59,8 +59,8 @@
                             <tr>
                                 <th>Jenis Kelamin</th>
                                 <td>Laki-laki</td>
-                    
                             <tr>
+                            </tr>
                         </table>
                     </div>
                         <!-- Tombol Edit -->
