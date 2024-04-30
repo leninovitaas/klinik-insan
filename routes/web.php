@@ -5,7 +5,9 @@ use App\Http\Controllers\AdminDashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KlienController;
 use App\Http\Controllers\AdminFormController;
+use App\Http\Controllers\EditBioController;
 use App\Http\Controllers\ProfilAdminController;
+
 
 
 
@@ -39,7 +41,9 @@ Route::resource('admin_klien', \App\Http\Controllers\KlienController::class);
 // triani tampilan profil admin
 Route::get('/admin_profile', [ProfilAdminController::class, 'showProfile'])->name('profile');
 
-
+// triani tampilan edit bio
+Route::get('/profile/edit', [EditBioController::class, 'editProfile'])->name('editProfile');
+Route::post('/profile/update', [EditBioController::class, 'updateProfile'])->name('updateProfile');
 //sasa admin kehadiran
 Route::get('/kehadiranklien', function () {
     return view('admin_kehadwiran.kehadiranklien');
