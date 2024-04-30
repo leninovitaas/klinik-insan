@@ -61,4 +61,5 @@
             </select>
         </div>
 
-        <button type="
+        <button type="submit" class="btn btn-primary">Simpan</button>
+        <a

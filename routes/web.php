@@ -31,10 +31,10 @@ Route::resource('admin_klien', \App\Http\Controllers\KlienController::class);
 
 // Route Controller Buat SideBar
 
-Route::get('/admin_profile', function () {
-    // Logika untuk menampilkan halaman profile
-    return view('profile');
-})->name('profile');
+// Route::get('/admin_profile', function () {
+//     // Logika untuk menampilkan halaman profile
+//     return view('profile');
+// })->name('profile');
 
 // triani tampilan profil admin
 Route::get('/admin_profile', [ProfilAdminController::class, 'showProfile'])->name('profile');
@@ -42,7 +42,7 @@ Route::get('/admin_profile', [ProfilAdminController::class, 'showProfile'])->nam
 
 //sasa admin kehadiran
 Route::get('/kehadiranklien', function () {
-    return view('admin_kehadiran.kehadiranklien');
+    return view('admin_kehadwiran.kehadiranklien');
 });
 
 Route::get('/riwayatkehadiranklien', function () {
