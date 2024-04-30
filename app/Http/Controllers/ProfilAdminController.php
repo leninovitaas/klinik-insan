@@ -9,15 +9,14 @@ class ProfilAdminController extends Controller
 {
     public function showProfile()
     {
-        // Logika untuk menampilkan halaman profil admin
-        // Misalnya, kita akan mengambil data admin dari database
-        $admin = Admin::find(auth()->user()->admin_id); // Ubah sesuai dengan cara Anda mengatur relasi antara user dan admin
-
-        // Pastikan data admin ditemukan
-        if (!$admin) {
-            abort(404); // Jika data admin tidak ditemukan, kembalikan halaman 404
+        // Pastikan pengguna sudah terautentikasi
+        if (!auth()->check()) {
+            return redirect()->route('login'); // Redirect ke halaman login jika belum terautentikasi
         }
 
-        return view('profile', compact('admin'));
+        // Ambil data admin yang sedang login
+        $admin = Admin::findOrFail(auth()->user()->admin_id); // Ubah sesuai dengan cara Anda mengatur relasi antara user dan admin
+
+        return view('profil', compact('admin'));
     }
 }
