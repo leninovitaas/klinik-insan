@@ -21,7 +21,7 @@
                 <div class="anakcontent">
                     <div style="margin-top: 50px;"></div>
                     <div style="background-color: #7ea1cd;  width:40%; margin:auto;  padding: 20px 40px; border-radius: 10px;">
-                        <h1 style="text-align: center; font-weight:bold; color:black; "">Data Klien</h1>
+                        <h1 style="text-align: center; font-weight:bold; color:black; ">Data Klien</h1>
                     </div>
                     <div style="display: flex; justify-content: space-between; margin-top: 20px;">
                         <div class="d-flex align-items-center">
@@ -41,7 +41,7 @@
                             <th>Alamat</th>
                             <th>No.Telepon</th>
                             <th>Paket</th>
-                            <th>L/P</th>
+                            <th>Jenis Kelamin</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -59,12 +59,12 @@
                             <td>{{$dataklien->jenis_kelamin}}</td>
                             <td class="text-center" >
                                 <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('admin_klien.destroy', $dataklien->id) }}" method="POST">
-                                    <a href="{{ route('admin_klien.show', $dataklien->id) }}" class="btn btn-sm btn-dark">SHOW</a>
                                     <a href="{{ route('admin_klien.edit', $dataklien->id) }}" class="btn btn-sm btn-primary">EDIT</a>
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-sm btn-danger">HAPUS</button>
                                 </form>
+                                
                                 {{-- <button class="btn btn-primary">Edit</button>
                                 <button class="btn btn-danger">Hapus</button> --}}
                             </td>
@@ -84,7 +84,7 @@
         </div>
 
         <script>
-            //message with sweetalert
+            message with sweetalert
             @if(session('success'))
                 Swal.fire({
                     icon: "success",
@@ -102,8 +102,11 @@
                     timer: 2000
                 });
             @endif
+
     
         </script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     </body>
 </html>

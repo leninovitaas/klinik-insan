@@ -14,13 +14,15 @@
             <div class="col-md-12">
                 <div class="card border-0 shadow-sm rounded">
                     <div class="card-body">
-                        <form action="{{ route('admin_klien.store') }}" method="POST" >
+                        <form action="{{ route('admin_klien.update', $data_kliens->id) }}" method="POST" >
                         
+                           
                             @csrf
+                            @method('PUT')
 
                             <div class="form-group mb-3">
                                 <label class="font-weight-bold">Nama</label>
-                                <input type="text" class="form-control @error('nama') is-invalid @enderror" name="nama" value="{{ old('nama') }}" placeholder="Masukkan Nama">
+                                <input type="text" class="form-control @error('nama') is-invalid @enderror" name="nama" value="{{ old('nama', $data_kliens->nama) }}" placeholder="Masukkan Nama">
                             
                                 <!-- error message untuk title -->
                                 @error('nama')
@@ -32,7 +34,7 @@
 
                             <div class="form-group mb-3">
                                 <label class="font-weight-bold">Nama_Wali</label>
-                                <input type="text" class="form-control @error('nama_wali') is-invalid @enderror" name="nama_wali" value="{{ old('nama_wali') }}" placeholder="Masukkan Nama Wali">
+                                <input type="text" class="form-control @error('nama_wali') is-invalid @enderror" name="nama_wali" value="{{ old('nama_wali', $data_kliens->nama_wali) }}" placeholder="Masukkan Nama Wali">
                             
                                 <!-- error message untuk title -->
                                 @error('nama_wali')
@@ -44,7 +46,7 @@
 
                             <div class="form-group mb-3">
                                 <label class="font-weight-bold">Alamat</label>
-                                <input  type="text" class="form-control @error('alamat') is-invalid @enderror" name="alamat" value="{{ old('alamat') }}" placeholder="Masukkan Alamat Anda"></input>
+                                <input  type="text" class="form-control @error('alamat') is-invalid @enderror" name="alamat" value="{{ old('alamat', $data_kliens->alamat) }}" placeholder="Masukkan Alamat Anda"></input>
                             
                                 <!-- error message untuk description -->
                                 @error('alamat')
@@ -55,7 +57,7 @@
                             </div>
                             <div class="form-group mb-3">
                                 <label class="font-weight-bold">No telepon</label>
-                                <input  type="text" class="form-control @error('no_telepon') is-invalid @enderror" name="no_telepon" value="{{ old('no_telepon') }}" placeholder="Masukkan No Telepon Anda"></input>
+                                <input  type="text" class="form-control @error('no_telepon') is-invalid @enderror" name="no_telepon" value="{{ old('no_telepon', $data_kliens->no_telepon) }}" placeholder="Masukkan No Telepon Anda"></input>
                             
                                 <!-- error message untuk description -->
                                 @error('no_telepon')
@@ -67,7 +69,7 @@
 
                             <div class="form-group mb-3">
                                 <label class="font-weight-bold">Paket</label>
-                                <select class="form-control @error('paket') is-invalid @enderror" name="paket" value="{{ old('paket') }}">
+                                <select class="form-control @error('paket') is-invalid @enderror" name="paket" value="{{ old('paket', $data_kliens->paket) }}">
                                     <option>Pilih Paket Anda</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -84,7 +86,7 @@
                            
                             <div class="form-group mb-3">
                                 <label class="font-weight-bold">Kelamin</label>
-                                <select class="form-control @error('jenis_kelamin') is-invalid @enderror" name="jenis_kelamin" value="{{ old('jenis_kelamin') }}">
+                                <select class="form-control @error('jenis_kelamin') is-invalid @enderror" name="jenis_kelamin" value="{{ old('jenis_kelamin', $data_kliens->jenis_kelamin) }}">
                                     <option>Pilih Jenis Kelamin</option>
                                     <option value="Laki-Laki">Laki-Laki</option>
                                     <option value="Perempuan">Perempuan</option>
@@ -114,5 +116,6 @@
     {{-- <script>
         CKEDITOR.replace( 'description' );
     </script> --}}
+   
 </body>
 </html>
