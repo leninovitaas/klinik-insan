@@ -3,21 +3,24 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Admin;
+use App\Models\ProfileAdmin;
+use Illuminate\Contracts\View\View;
 
 class ProfilAdminController extends Controller
 {
-    public function showProfile()
+    public function index() : View
     {
-        // Pastikan pengguna sudah terautentikasi
-        // if (!auth()->check()) {
-        //     return redirect()->route('login'); // Redirect ke halaman login jika belum terautentikasi
-        // }
+        $profile_admins = ProfileAdmin::all();
+        return view('admin_profile.profile', compact('profile_admins'));
+    }
 
-        // Ambil data admin yang sedang login
-        // $admin = Admin::findOrFail(auth()->user()->admin_id); // Ubah sesuai dengan cara Anda mengatur relasi antara user dan admin
+    public function showProfile($nik) : View
+    {
+        $profile_admins = ProfileAdmin::findOrFail($nik);
+        return view('admin_profile.profile_detail', compact('profile_admins'));
+    }
 
-        // return view('profile', compact('admin'));
-        return view('profile');
+    public function editProfile(){
+        return view('admin_profile.edit_profile');
     }
 }

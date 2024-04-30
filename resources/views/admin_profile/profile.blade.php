@@ -26,40 +26,41 @@
                     <div class="card-header">
                         <h3>Informasi Pribadi</h3>
                     </div>
+                    @foreach($profile_admins as $profile_admin)
                     <div class="card-body">
                         <table class="table table-striped">
                             <tr>
                                 <th>NIK</th>
-                                <td>PYRMATS</td>
+                                <td>{{ $profile_admin->nik }}</td>
                             </tr>
+
                             <tr>
                                 <th>Nama</th>
-                                <td>PYRMATS</td>
+                                <td>{{ $profile_admin->nama }}</td>
                             </tr>
                             <tr>
                                 <th>Tempat Lahir</th>
-                                <td>Malang</td>
+                                <td>{{ $profile_admin->tempat_lahir }}</td>
                             </tr>
                             <tr>
                                 <th>Tanggal Lahir</th>
-                                <td>2000-01-01</td>
+                                <td>{{ $profile_admin->tanggal_lahir->format('d-m-Y') }}</td>
                             </tr>
                             <tr>
                                 <th>Alamat</th>
-                                <td>Jl. Dr. Cipto No. 23, Malang</td>
+                                <td>{{ $profile_admin->alamat }}</td>
                             </tr>
                             <tr>
                                 <th>No. Telp</th>
-                                <td>(0341) 555-1234</td>
+                                <td>{{ $profile_admin->no_telp }}</td>
                             </tr>
                             <tr>
                                 <th>Email</th>
-                                <td>pyrm@example.com</td>
+                                <td>{{ $profile_admin->email }}</td>
                             </tr>
                             <tr>
                                 <th>Jenis Kelamin</th>
-                                <td>Laki-laki</td>
-                            <tr>
+                                <td>{{ $profile_admin->jenis_kelamin }}</td>
                             </tr>
                         </table>
                     </div>
@@ -67,9 +68,11 @@
                         <div class="container">
                            <div class="d-flex">
                              <div class="text-right flex-end">
-                                 <a href="#" class="btn btn-primary">Edit</a>
+                             <a href="{{ route('edit_profile') }}" class="btn btn-primary">Edit</a>
+
                             </div>
                         </div>
+                        @endforeach
                     </div>
     </div>
             </div>
