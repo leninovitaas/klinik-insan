@@ -21,15 +21,16 @@
                 <div class="anakcontent">
                     <div style="margin-top: 50px;"></div>
                     <div style="background-color: #7ea1cd;  width:40%; margin:auto;  padding: 20px 40px; border-radius: 10px;">
-                        <h1 style="text-align: center; font-weight:bold; color:black; "">Data Klien</h1>
+                        <h1 style="text-align: center; font-weight:bold; color:black; ">Data Klien</h1>
                     </div>
                     <div style="display: flex; justify-content: space-between; margin-top: 20px;">
                         <div class="d-flex align-items-center">
                             <h5 class="mb-0">Cari :</h5>
                             <input type="text" placeholder="  Cari Klien..." style="margin-left:5px; border-radius:10px;">
                         </div>
-                        {{-- pakek tag a soale biar bisa mengunakan Href untuk route --}}
-                        <a class="btn btn-primary " href="{{ route('admin_klien.create') }}">Tambah</a>
+                        {{-- pakek tag a agar bisa mengunakan Href untuk route --}}
+                        <a class="btn btn-custom " style="background-color:  #447abc;  padding: 10px;
+                        color: white; font-weight: 600;" href="{{ route('admin_klien.create') }}">Tambah</a>
                         {{-- <button class="btn btn-tambah">
                         </button> --}}
                     </div>
