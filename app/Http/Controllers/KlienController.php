@@ -36,6 +36,7 @@ class KlienController extends Controller
      */
     public function create(): View
     {
+        //controller yang berfungsi untuk menampilkan laman create data
         return view('admin_klien.create_data');
     }
 
@@ -62,7 +63,7 @@ class KlienController extends Controller
         ]);
 
        
-        //create product
+        //mengambil data dari model data klien
         DataKlien::create([
             'nama'         => $request->nama,
             'nama_wali'    => $request->nama_wali,
@@ -83,10 +84,10 @@ class KlienController extends Controller
          */
         public function edit(string $id): View
         {
-            //get product by ID
+            //mendapatkan ID dari tabel data klien 
             $data_kliens = DataKlien::findOrFail($id);
 
-            //render view with product
+            //menampilkan laman edit data yang datanya diambil dari data klien
             return view('admin_klien.edit_data', compact('data_kliens'));
         }
 
@@ -112,7 +113,7 @@ class KlienController extends Controller
             'jenis_kelamin'=> 'required'
         ]);
 
-        //get product by ID
+        //mendapatkan ID dari tabel
         $data_kliens = DataKlien::findOrFail($id);
 
 
@@ -137,15 +138,16 @@ class KlienController extends Controller
      * @param  mixed $id
      * @return RedirectResponse
      */
+    //fungsi untuk menghapus
     public function destroy($id): RedirectResponse
     {
-        //get product by ID
+        //mendapatkan ID dari tabel
         $data_kliens = DataKlien::findOrFail($id);
 
-        //delete product
+        //menghapus data dari tabel yang ID nya sudah ditemukan 
         $data_kliens->delete();
 
-        //redirect to index
+        //redirect to index / menampilkan laman index
         return redirect()->route('admin_klien.index')->with(['success' => 'Data Berhasil Dihapus!']);
     }
 }
