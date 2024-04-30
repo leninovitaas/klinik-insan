@@ -16,7 +16,7 @@ use Illuminate\Http\Request;
 class KlienController extends Controller
 {
     //untuk membuat fungsi melihat admin_klien.blade.php
-    public function index() : View //mengunkan fungsi view
+    public function index() : View //mengunakan fungsi view
     {
 
         //Untuk Menampilkan Data Dari Tabel_dataKlien
@@ -73,7 +73,7 @@ class KlienController extends Controller
             'jenis_kelamin'=> $request->jenis_kelamin,
         ]);
 
-        //redirect to index
+        //redirect to index // menampilkan laman index
         return redirect()->route('admin_klien.index')->with(['success' => 'Data Berhasil Disimpan!']);
     }
     /**
@@ -128,7 +128,7 @@ class KlienController extends Controller
             ]);
 
 
-        //redirect to index
+        //redirect to index //menampilkan laman index
         return redirect()->route('admin_klien.index')->with(['success' => 'Data Berhasil Diubah!']);
     }
 
