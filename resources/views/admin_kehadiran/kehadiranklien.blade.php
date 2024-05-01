@@ -8,34 +8,35 @@
     <link href="style1.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+    <style>
+
+    .container-cs{
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+}
+
+.aside {
+    width: 23%;
+    height: 100%;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+
+}
+        </style>
 
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <!-- Sidebar -->
-            <div class="col-lg-3">
-                <div class="sidebar">
-                    <nav class="navbar navbar-expand-lg navbar-dark">
-                        <div class="container">
-                            <a class="navbar-brand" href="#"><img src="/gambar/logo1.png" alt="Logo" width="100px" height="100"></a>
-                        </div>
-                    </nav>
-                    <h3 class="text-center text-white">Kehadiran klien</h3>
-                    <div class="kotak">
-                        <a href="#">Dashboard</a>
-                        <a href="#">Klien</a>
-                        <a href="#">Form</a>
-                        <a href="#">Kehadiran</a>
-                        <a href="#">Riwayat Kehadiran</a>
-                        <a href="#">Billing</a>
-                    </div>
-                    <button class="btn btn-danger btn-block">Logout</button>
-                </div>
-            </div>
+    <div class="container-cs">
+
+        @include('layouts.sidebar')
 
 
             <!-- Main Content -->
-            <div class="col-lg-9">
+            {{-- <div class="col-lg-9"> --}}
+                <div class="content">
                 <div class="container mt-5">
                     <h1 class="text-center text-black">Absen Kehadiran Klien</h1>
                     <form action="http://127.0.0.1:8000/riwayatkehadiranklien#" method="POST">
@@ -63,5 +64,4 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
