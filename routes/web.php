@@ -41,7 +41,7 @@ Route::resource('admin_klien', \App\Http\Controllers\KlienController::class);
 // triani tampilan profil admin
 // Route::get('/admin_profile', [ProfilAdminController::class, 'showProfile'])->name('admin_profile');
 // Route::get('/admin_profile/{nik}', 'ProfilAdminController@showProfile');
-Route::resource('/profile', \App\Http\Controllers\ProfilAdminController::class);
+Route::resource('profile', \App\Http\Controllers\ProfilAdminController::class);
 Route::get('/edit_profile', [ProfilAdminController::class, 'editProfile'])->name('edit_profile');
 
 

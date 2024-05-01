@@ -68,8 +68,9 @@
                         <div class="container">
                            <div class="d-flex">
                              <div class="text-right flex-end">
-                             <a href="{{ route('edit_profile') }}" class="btn btn-primary">Edit</a>
-
+                             @foreach($profile_admins as $profile)
+                             <a href="{{ route('profile.edit', ['profile' => $profile->nik]) }}" class="btn btn-primary">Edit</a>
+                            @endforeach
                             </div>
                         </div>
                         @endforeach

@@ -15,7 +15,7 @@ return new class extends Migration
             $table->integer('nik')->primary();
             $table->string('nama');
             $table->string('tempat_lahir');
-            $table->date('tanggal_lahir');
+            $table->date('tanggal_lahir');  
             $table->text('alamat');
             $table->string('no_telp');
             $table->string('email')->unique();
