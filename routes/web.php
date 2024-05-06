@@ -39,11 +39,12 @@ Route::resource('admin_klien', \App\Http\Controllers\KlienController::class);
 // })->name('profile');
 
 // triani tampilan profil admin
-Route::get('/admin_profile', [ProfilAdminController::class, 'showProfile'])->name('profile');
+// Route::get('/admin_profile', [ProfilAdminController::class, 'showProfile'])->name('admin_profile');
+// Route::get('/admin_profile/{nik}', 'ProfilAdminController@showProfile');
+Route::resource('profile', \App\Http\Controllers\ProfilAdminController::class);
+Route::get('/edit_profile', [ProfilAdminController::class, 'editProfile'])->name('edit_profile');
 
-// triani tampilan edit bio
-Route::get('/profile/edit', [EditBioController::class, 'editProfile'])->name('editProfile');
-Route::post('/profile/update', [EditBioController::class, 'updateProfile'])->name('updateProfile');
+
 //sasa admin kehadiran
 Route::get('/kehadiranklien', function () {
     return view('admin_kehadwiran.kehadiranklien');
