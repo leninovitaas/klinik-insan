@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('profile_admins', function (Blueprint $table) {
-            $table->integer('nik')->primary();
+            $table->integer('nik')->length(16)->primary();
             $table->string('nama');
             $table->string('tempat_lahir');
             $table->date('tanggal_lahir');  
