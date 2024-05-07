@@ -47,7 +47,7 @@ class ProfilAdminController extends Controller
             'alamat' => 'required|string|max:100',
             'no_telp' => 'required|string|max:13',
             'email' => 'required|email|max:25',
-            'jenis_kelamin' => 'required|string|in:Laki-laki,Perempuan',
+            'jenis_kelamin' => 'required|string|in:Laki-Laki,Perempuan',
         ]);
 
         // Mengambil data profil admin berdasarkan ID
